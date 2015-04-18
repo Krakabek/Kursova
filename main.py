@@ -26,7 +26,8 @@ p.xlabel('Time')
 p.ylabel('feelings')
 p.legend(('Romeo', 'Juliet'))
 p.title('Romeo and Juliet relations')
-p.savefig('XY(t).png', dpi=96)
+# p.savefig('XY(t).png', dpi=96)  #  uncomment to save plots
+p.show()
 
 p.figure()
 p.plot(state[:, 0], state[:, 1])
@@ -35,7 +36,8 @@ p.xlabel('Romeo')
 p.ylabel('Juliet')
 p.legend(('System state', ''))
 p.title('Romeo and Juliet relations')
-p.savefig('XY.png', dpi=96)
+# p.savefig('XY.png', dpi=96)  #  uncomment to save plots
+p.show()
 
 fig = p.figure()
 ax = p3.Axes3D(fig)
@@ -44,4 +46,5 @@ ax.set_xlabel('Romeo')
 ax.set_ylabel('Juliet')
 ax.set_zlabel('Time')
 p.title('Romeo and Juliet relations')
-p.savefig('XYT', dpi=96)
+# p.savefig('XYT', dpi=96)  #  uncomment to save plots
+p.show()
