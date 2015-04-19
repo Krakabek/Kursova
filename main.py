@@ -17,7 +17,6 @@ def romeo_juliet(state, t):
 
 t = p.arange(0, 30, 0.01)
 state0 = [0.1, 0.1]
-
 state = odeint(romeo_juliet, state0, t)
 
 p.figure()
@@ -37,7 +36,16 @@ p.xlabel('Romeo')
 p.ylabel('Juliet')
 p.legend(('System state', ''))
 p.title('Romeo and Juliet relations')
-# p.savefig('XY.png', dpi=96)  #  uncomment to save plots
+
+# ax = p.gca() #uncomment for arrows
+# i = 0
+# while i < len(t)-10-3.5*i:
+#     arr = p.Arrow(state[:, 0][i], state[:, 1][i], state[:, 0][i+10+0.05*i] - state[:, 0][i], state[:, 1][i+10+0.05*i] - state[:, 1][i], edgecolor="white", width=0.015)
+#     ax.add_patch(arr)
+#     arr.set_facecolor('r')
+#     i += 50 + 0.1*i
+
+# p.savefig('XY_arr.png', dpi=96)  #  uncomment to save plots
 p.show()
 
 fig = p.figure()
