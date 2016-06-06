@@ -88,34 +88,16 @@ p.title('Reaction to a repetative positive event')
 p.savefig('Repetative PositiveEvent.png', dpi=96)  #  uncomment to save plots
 p.show()
 
-# p.figure()
-# p.subplot(211)
-# p.plot(normal)
-# p.subplot(212)
-# p.plot(t1, realSol)
-# p.axhline(0, color='black')
-# p.ylim([-0.5, 0.5])
-# p.xlabel('Time')
-# p.legend(('R', 'H'))
-# p.title('Real life')
-# p.savefig('Real Life.png', dpi=96)  #  uncomment to save plots
-# p.show()
-#
-# p.figure()
-# p.plot(state[:, 0], state[:, 1])
-# p.ylim([-10, 1000])
-# p.xlabel('Romeo')
-# p.ylabel('Juliet')
-# p.legend(('System state', ''))
-# p.title('Romeo and Juliet relations')
-#
-# ax = p.gca() #uncomment for arrows
-# i = 0
-# while i < len(t)-10:
-#     arr = p.Arrow(state[:, 0][i], state[:, 1][i], state[:, 0][i+1+0.05*i] - state[:, 0][i], state[:, 1][i+1+0.05*i] - state[:, 1][i], edgecolor="white", width=0.15)
-#     ax.add_patch(arr)
-#     arr.set_facecolor('r')
-#     i += 1 + 0.1*i
-#
-# # p.savefig('XY_arr.png', dpi=96)  #  uncomment to save plots
-# p.show()
+p.figure()
+p.subplot(211)
+p.plot(normal)
+p.subplot(212)
+p.plot(t1, realSol)
+p.axhline(0, color='black')
+p.ylim([-0.5, 0.5])
+p.xlabel('Time')
+p.legend(('R', 'H'))
+p.title('Real life')
+p.savefig('Real Life.png', dpi=96)  #  uncomment to save plots
+p.show()
+
