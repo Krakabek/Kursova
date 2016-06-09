@@ -31,7 +31,7 @@ p.plot(t1, realSol)
 p.axhline(0, color='black')
 p.ylim([-0.5, 0.5])
 p.xlabel('Time')
-p.legend(('R', 'H'))
+p.legend(('Reaction', 'Happines'))
 p.title('Real life')
 p.savefig('Real Life.png', dpi=300)  #  uncomment to save plots
 p.show()
