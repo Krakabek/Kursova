@@ -33,7 +33,7 @@ p.ylim([-0.5, 0.5])
 p.xlabel('Time')
 p.legend(('R', 'H'))
 p.title('Real life')
-# p.savefig('Real Life.png', dpi=300)  #  uncomment to save plots
+p.savefig('Real Life.png', dpi=300)  #  uncomment to save plots
 p.show()
 
 p.figure()
@@ -43,9 +43,7 @@ p.axhline(0, color='black')
 p.axvline(0, color='black')
 p.xlabel('Reaction')
 p.ylabel('Happiness')
-p.legend(('System state', ''))
-p.title('Parametric plot')
-# p.savefig('Real Life Parametric.png', dpi=300)  #  uncomment to save plots
+p.savefig('Real Life Parametric.png', dpi=300)  #  uncomment to save plots
 p.show()
 
 p.figure()
