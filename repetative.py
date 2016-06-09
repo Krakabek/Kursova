@@ -37,7 +37,7 @@ p.axis([0, 15, -0.5, 0.5])
 p.xlabel('Time')
 p.legend(('Reaction', 'Happiness'))
 p.title('Reaction to a repetative positive event')
-# p.savefig('Repetative PositiveEvent.png', dpi=300)  #  uncomment to save plots
+p.savefig('Repetative PositiveEvent.png', dpi=300)  #  uncomment to save plots
 p.show()
 
 p.figure()
@@ -47,7 +47,7 @@ p.axhline(0, color='black')
 p.axvline(0, color='black')
 p.xlabel('Reaction')
 p.ylabel('Happiness')
-# p.savefig('Repetative PositiveEvent Parametric.png', dpi=300)  #  uncomment to save plots
+p.savefig('Repetative PositiveEvent Parametric.png', dpi=300)  #  uncomment to save plots
 p.show()
 
 p.figure()
@@ -64,7 +64,7 @@ while i < len(t)-20:
     ax.add_patch(arr)
     arr.set_facecolor('r')
     i += 20
-# p.savefig('Repetative PositiveEvent Parametric Arrow.png', dpi=300)  #  uncomment to save plots
+p.savefig('Repetative PositiveEvent Parametric Arrow.png', dpi=300)  #  uncomment to save plots
 p.show()
 
 

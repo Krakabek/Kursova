@@ -37,7 +37,7 @@ p.axis([0, 15, -0.2, 0.2])
 p.xlabel('Time')
 p.legend(('Reaction', 'Happiness'))
 p.title('Reaction to a single positive event')
-# p.savefig('Single PositiveEvent.png', dpi=300)  #  uncomment to save plots
+p.savefig('Single PositiveEvent.png', dpi=300)  #  uncomment to save plots
 p.show()
 
 p.figure()
@@ -47,7 +47,7 @@ p.axhline(0, color='black')
 p.axvline(0, color='black')
 p.xlabel('Reaction')
 p.ylabel('Happiness')
-# p.savefig('Single PossitiveEvent Parametric.png', dpi=300)  #  uncomment to save plots
+p.savefig('Single PositiveEvent Parametric.png', dpi=300)  #  uncomment to save plots
 p.show()
 
 p.figure()
