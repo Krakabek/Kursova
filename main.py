@@ -69,7 +69,19 @@ p.axis([0, 15, -0.2, 0.2])
 p.xlabel('Time')
 p.legend(('R', 'H'))
 p.title('Reaction to a single positive event')
-p.savefig('Single PositiveEvent.png', dpi=96)  #  uncomment to save plots
+# p.savefig('Single PositiveEvent.png', dpi=300)  #  uncomment to save plots
+p.show()
+
+p.figure()
+p.plot(lotterySol[:, 0], lotterySol[:, 1])
+p.axis([-0.1, 0.2, -0.2, 0.2])
+p.axhline(0, color='black')
+p.axvline(0, color='black')
+p.xlabel('R')
+p.ylabel('H')
+p.legend(('System state', ''))
+p.title('Parametric plot')
+# p.savefig('Single PositiveEvent Parametric.png', dpi=300)  #  uncomment to save plots
 p.show()
 
 p.figure()
@@ -85,37 +97,42 @@ p.axis([0, 15, -0.5, 0.5])
 p.xlabel('Time')
 p.legend(('R', 'H'))
 p.title('Reaction to a repetative positive event')
-p.savefig('Repetative PositiveEvent.png', dpi=96)  #  uncomment to save plots
+# p.savefig('Repetative PositiveEvent.png', dpi=300)  #  uncomment to save plots
 p.show()
 
-# p.figure()
-# p.subplot(211)
-# p.plot(normal)
-# p.subplot(212)
-# p.plot(t1, realSol)
-# p.axhline(0, color='black')
-# p.ylim([-0.5, 0.5])
-# p.xlabel('Time')
-# p.legend(('R', 'H'))
-# p.title('Real life')
-# p.savefig('Real Life.png', dpi=96)  #  uncomment to save plots
-# p.show()
-#
-# p.figure()
-# p.plot(state[:, 0], state[:, 1])
-# p.ylim([-10, 1000])
-# p.xlabel('Romeo')
-# p.ylabel('Juliet')
-# p.legend(('System state', ''))
-# p.title('Romeo and Juliet relations')
-#
-# ax = p.gca() #uncomment for arrows
-# i = 0
-# while i < len(t)-10:
-#     arr = p.Arrow(state[:, 0][i], state[:, 1][i], state[:, 0][i+1+0.05*i] - state[:, 0][i], state[:, 1][i+1+0.05*i] - state[:, 1][i], edgecolor="white", width=0.15)
-#     ax.add_patch(arr)
-#     arr.set_facecolor('r')
-#     i += 1 + 0.1*i
-#
-# # p.savefig('XY_arr.png', dpi=96)  #  uncomment to save plots
-# p.show()
+p.figure()
+p.plot(drugsSol[:, 0], drugsSol[:, 1])
+p.axis([-0.1, 0.3, -0.2, 0.2])
+p.axhline(0, color='black')
+p.axvline(0, color='black')
+p.xlabel('R')
+p.ylabel('H')
+p.legend(('System state', ''))
+p.title('Parametric plot')
+# p.savefig('Repetative PositiveEvent Parametric.png', dpi=300)  #  uncomment to save plots
+p.show()
+
+p.figure()
+p.subplot(211)
+p.plot(normal)
+p.subplot(212)
+p.plot(t1, realSol)
+p.axhline(0, color='black')
+p.ylim([-0.5, 0.5])
+p.xlabel('Time')
+p.legend(('R', 'H'))
+p.title('Real life')
+# p.savefig('Real Life.png', dpi=300)  #  uncomment to save plots
+p.show()
+
+p.figure()
+p.plot(realSol[:, 0], realSol[:, 1])
+p.axis([-0.1, 0.2, -0.2, 0.2])
+p.axhline(0, color='black')
+p.axvline(0, color='black')
+p.xlabel('R')
+p.ylabel('H')
+p.legend(('System state', ''))
+p.title('Parametric plot')
+# p.savefig('Real Life Parametric.png', dpi=300)  #  uncomment to save plots
+p.show()
