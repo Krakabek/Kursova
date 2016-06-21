@@ -95,8 +95,8 @@ p.plot(emotionsSol1[:, 0], emotionsSol1[:, 2])
 p.axis([-1, 1, -1, 1])
 p.axhline(0, color='black')
 p.axvline(0, color='black')
-p.xlabel('Reaction')
-p.ylabel('Happiness')
+p.xlabel('Romeo')
+p.ylabel('Julliet')
 ax = p.gca()  # uncomment for arrows
 i = 0
 while i < len(t) - 300:
@@ -122,8 +122,8 @@ p.plot(emotionsSol2[:, 0], emotionsSol2[:, 2])
 p.axis([-0.2, 0.2, -0.2, 0.2])
 p.axhline(0, color='black')
 p.axvline(0, color='black')
-p.xlabel('Reaction')
-p.ylabel('Happiness')
+p.xlabel('Romeo')
+p.ylabel('Julliet')
 ax = p.gca()  # uncomment for arrows
 i = 0
 while i < len(t) - 120:
@@ -149,8 +149,8 @@ p.plot(emotionsSol3[:, 0], emotionsSol3[:, 2])
 p.axis([-0.3, 0.3, -0.3, 0.3])
 p.axhline(0, color='black')
 p.axvline(0, color='black')
-p.xlabel('Reaction')
-p.ylabel('Happiness')
+p.xlabel('Romeo')
+p.ylabel('Julliet')
 ax = p.gca()  # uncomment for arrows
 i = 0
 while i < len(t) - 120:
@@ -185,8 +185,8 @@ p.plot(emotionsSol4[:, 0], emotionsSol4[:, 2])
 p.axis([-1, 10, -1, 15])
 p.axhline(0, color='black')
 p.axvline(0, color='black')
-p.xlabel('Reaction')
-p.ylabel('Happiness')
+p.xlabel('Romeo')
+p.ylabel('Julliet')
 ax = p.gca()  # uncomment for arrows
 i = 1000
 while i < len(t1) - 4000:
@@ -212,8 +212,8 @@ p.plot(emotionsSol5[:, 0], emotionsSol5[:, 2])
 p.axis([-0.1, 0.1, -0.1, 0.25])
 p.axhline(0, color='black')
 p.axvline(0, color='black')
-p.xlabel('Reaction')
-p.ylabel('Happiness')
+p.xlabel('Romeo')
+p.ylabel('Julliet')
 ax = p.gca()  # uncomment for arrows
 i = 0
 while i < len(t) - 8000:
