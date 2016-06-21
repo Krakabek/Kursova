@@ -5,6 +5,7 @@ import pylab as p
 import math
 
 
+#increasing love
 def emotionsPair1(state, t):
     R = state[0]
     Hr = state[1]
@@ -17,6 +18,7 @@ def emotionsPair1(state, t):
     return [Hr, -a * Hr - R + alpha * J, Hj, -b * Hj - J + beta * R]
 
 
+#decreasing love
 def emotionsPair2(state, t):
     R = state[0]
     Hr = state[1]
@@ -29,6 +31,7 @@ def emotionsPair2(state, t):
     return [Hr, -a * Hr - R + numpy.exp(-alpha * t) * J, Hj, -b * Hj - J + numpy.exp(-beta * t) * R]
 
 
+#standart love
 def emotionsPair3(state, t):
     R = state[0]
     Hr = state[1]
@@ -41,6 +44,7 @@ def emotionsPair3(state, t):
     return [Hr, -a * Hr - R + numpy.exp(-alpha * t) * J, Hj, -b * Hj - J + numpy.exp(-beta * t) * R]
 
 
+#ignore love
 def emotionsPair4(state, t):
     R = state[0]
     Hr = state[1]
@@ -53,6 +57,7 @@ def emotionsPair4(state, t):
     return [Hr, -a * Hr - R + numpy.exp(-alpha * t) * J, Hj, -b * Hj - J + beta * R]
 
 
+#ignore love flegmatic
 def emotionsPair5(state, t):
     R = state[0]
     Hr = state[1]
