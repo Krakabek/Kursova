@@ -5,7 +5,7 @@ import pylab as p
 import math
 
 
-#increasing love
+# increasing love
 def emotionsPair1(state, t):
     R = state[0]
     Hr = state[1]
@@ -18,7 +18,7 @@ def emotionsPair1(state, t):
     return [Hr, -a * Hr - R + alpha * J, Hj, -b * Hj - J + beta * R]
 
 
-#decreasing love
+# decreasing love
 def emotionsPair2(state, t):
     R = state[0]
     Hr = state[1]
@@ -31,7 +31,7 @@ def emotionsPair2(state, t):
     return [Hr, -a * Hr - R + numpy.exp(-alpha * t) * J, Hj, -b * Hj - J + numpy.exp(-beta * t) * R]
 
 
-#standart love
+# standart love
 def emotionsPair3(state, t):
     R = state[0]
     Hr = state[1]
@@ -44,7 +44,7 @@ def emotionsPair3(state, t):
     return [Hr, -a * Hr - R + numpy.exp(-alpha * t) * J, Hj, -b * Hj - J + numpy.exp(-beta * t) * R]
 
 
-#ignore love
+# ignore love
 def emotionsPair4(state, t):
     R = state[0]
     Hr = state[1]
@@ -57,7 +57,7 @@ def emotionsPair4(state, t):
     return [Hr, -a * Hr - R + numpy.exp(-alpha * t) * J, Hj, -b * Hj - J + beta * R]
 
 
-#ignore love flegmatic
+# ignore love flegmatic
 def emotionsPair5(state, t):
     R = state[0]
     Hr = state[1]
@@ -105,7 +105,25 @@ while i < len(t) - 300:
     ax.add_patch(arr)
     arr.set_facecolor('r')
     i += 250 + 50 / (1 + i)
-p.savefig('Increasing Love Parametric Arrow.png', dpi=300)  #  uncomment to save plots
+# p.savefig('Increasing Love Parametric Arrow.png', dpi=300)  #  uncomment to save plots
+p.show()
+
+p.figure()
+p.plot(emotionsSol1[:, 1], emotionsSol1[:, 3])
+p.axis([-1, 1, -1, 1])
+p.axhline(0, color='black')
+p.axvline(0, color='black')
+p.xlabel('HapinessRomeo')
+p.ylabel('HapinessJulliet')
+ax = p.gca()  # uncomment for arrows
+i = 0
+while i < len(t) - 300:
+    arr = p.Arrow(emotionsSol1[:, 1][i], emotionsSol1[:, 3][i], emotionsSol1[:, 1][i + 100] - emotionsSol1[:, 1][i],
+                  emotionsSol1[:, 3][i + 100] - emotionsSol1[:, 3][i], edgecolor="white", width=0.15)
+    ax.add_patch(arr)
+    arr.set_facecolor('r')
+    i += 250 + 50 / (1 + i)
+# p.savefig('Increasing Love Hapiness Parametric Arrow.png', dpi=300)  #  uncomment to save plots
 p.show()
 
 p.figure()
@@ -114,7 +132,7 @@ p.axhline(0, color='black')
 p.axis([0, 10, -0.2, 0.2])
 p.xlabel('Time')
 p.legend(('ReactionRomeo', 'HappinessRomeo', 'ReactionJulliet', 'HappinessJulliet'))
-p.savefig('Decreasing Love.png', dpi=300)  #  uncomment to save plots
+# p.savefig('Decreasing Love.png', dpi=300)  #  uncomment to save plots
 p.show()
 
 p.figure()
@@ -132,8 +150,28 @@ while i < len(t) - 120:
     ax.add_patch(arr)
     arr.set_facecolor('r')
     i += 120
-p.savefig('Decreasing Parametric Arrow.png', dpi=300)  #  uncomment to save plots
+# p.savefig('Decreasing Parametric Arrow.png', dpi=300)  #  uncomment to save plots
 p.show()
+
+p.figure()
+p.plot(emotionsSol2[:, 1], emotionsSol2[:, 3])
+p.axis([-0.035, 0.01, -0.04, 0.01])
+p.axhline(0, color='black')
+p.axvline(0, color='black')
+p.xlabel('RomeoHappiness')
+p.ylabel('JullietHappiness')
+ax = p.gca()  # uncomment for arrows
+i = 0
+while i < len(t) - 220:
+    arr = p.Arrow(emotionsSol2[:, 1][i], emotionsSol2[:, 3][i],
+                  emotionsSol2[:, 1][i + 20 * (1 + 0.01 * i)] - emotionsSol2[:, 1][i],
+                  emotionsSol2[:, 3][i + 20 * (1 + 0.01 * i)] - emotionsSol2[:, 3][i], edgecolor="white", width=0.005)
+    ax.add_patch(arr)
+    arr.set_facecolor('r')
+    i += 100 * (1 + 0.01 * i)
+# p.savefig('Decreasing Hapiness Parametric Arrow.png', dpi=300)  # uncomment to save plots
+p.show()
+
 
 p.figure()
 p.plot(t, emotionsSol3)
@@ -195,7 +233,26 @@ while i < len(t1) - 4000:
     ax.add_patch(arr)
     arr.set_facecolor('r')
     i += 350
-p.savefig('Ignore Love Parametric.png', dpi=300)  #  uncomment to save plots
+# p.savefig('Ignore Love Parametric.png', dpi=300)  #  uncomment to save plots
+p.show()
+
+
+p.figure()
+p.plot(emotionsSol4[:, 1], emotionsSol4[:, 3])
+p.axis([-0.5, 0.5, -0.5, 0.5])
+p.axhline(0, color='black')
+p.axvline(0, color='black')
+p.xlabel('RomeoHappiness')
+p.ylabel('JullietHappiness')
+ax = p.gca()  # uncomment for arrows
+i = 0
+while i < len(t1) - 1000:
+    arr = p.Arrow(emotionsSol4[:, 1][i], emotionsSol4[:, 3][i], emotionsSol4[:, 1][i + 500] - emotionsSol4[:, 1][i],
+                  emotionsSol4[:, 3][i + 500] - emotionsSol4[:, 3][i], edgecolor="white", width=0.1)
+    ax.add_patch(arr)
+    arr.set_facecolor('r')
+    i += 1000
+p.savefig('Ignore Love Happiness Parametric.png', dpi=300)  #  uncomment to save plots
 p.show()
 
 p.figure()
